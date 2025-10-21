@@ -1,7 +1,9 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import {logo} from '../public/assets'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
   return (
@@ -11,49 +13,73 @@ const Navbar = () => {
             <div>
                 <Image src={logo} className='w-14' alt="logo"/>
             </div>
-            <div>
+            <div className='hidden mdl:flex items-center justify-between gap-6'>
                 <ul className='flex text-[13px] gap-7'>
-                    <li className=''>
-                        
+                    <motion.li className=''
+                    initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5 }}  >
                         <Link href="#home"
                         className="flex items-center gap-1 font-medium text-textDark cursor-pointer hover:text-textGreen duration-300 nav-link">
                             Home
                             </Link>
-                    </li>
-                    <li className=''>
-                        
+                    </motion.li>
+                    <motion.li className=''
+                    initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay:0.3 }}  >
                         <Link href="#about"
                         className="flex items-center gap-1 font-medium text-textDark cursor-pointer hover:text-textGreen duration-300 nav-link">
                             <span className="text-textGreen">01</span>
                             About
                             </Link>
-                    </li>
-                    <li className=''>
-                        
+                    </motion.li>
+                    <motion.li className=''
+                    initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay:0.3 }}  >
                         <Link href="#projects"
                         className="flex items-center gap-1 font-medium text-textDark cursor-pointer hover:text-textGreen duration-300 nav-link">
                             <span className="text-textGreen">02</span>
                             Projects
                             </Link>
-                    </li>
-                    <li className=''>
-                        
+                    </motion.li>
+                    <motion.li className=''
+                    initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5,delay:0.3 }}  >
                         <Link href="#experience"
                         className="flex items-center gap-1 font-medium text-textDark cursor-pointer hover:text-textGreen duration-300 nav-link">
                             <span className="text-textGreen">03</span>
                             Experience
                             </Link>
-                    </li>
-                    <li className=''>
-                        
+                    </motion.li>
+                    <motion.li className=''
+                    initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5,delay:0.3 }}  >
                         <Link href="#contact"
                         className="flex items-center gap-1 font-medium text-textDark cursor-pointer hover:text-textGreen duration-300 nav-link">
                             <span className="text-textGreen">04</span>
                             Contact
                             </Link>
-                    </li>
+                    </motion.li>
                 </ul>
+                <motion.button 
+                initial={{ y: -10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay:0.3 }}  className='px-4 py-2  rounded-md text-textGreen text-[13px] border border-textGreen  hover:bg-hoverColor duration-300' >
+                   <a href="/assets/trust_resume.pdf" target='_blank'>Resume</a> 
+                    </motion.button>
             </div>
+            <button className="menu w-6 h-5 flex flex-col justify-between items-center mdl:hidden text-4xl text-textGreen cursor-pointer overflow-hidden group">
+                <span className='w-full h-[2px] bg-textGreen inline-flex transform group-hover:translate-x-2 transition-all ease-in-out duration-300'></span>
+                <span className='w-full h-[2px] bg-textGreen inline-flex transform group-hover:translate-x-0 transition-all ease-in-out duration-300'></span>
+                <span className='w-full h-[2px] bg-textGreen inline-flex transform group-hover:translate-x-3 transition-all ease-in-out duration-300'></span>
+                <span className='w-full h-[2px] bg-textGreen inline-flex transform group-hover:translate-x-4 transition-all ease-in-out duration-300'></span>
+                
+                
+            </button>
         </div>
     </nav>
   )
