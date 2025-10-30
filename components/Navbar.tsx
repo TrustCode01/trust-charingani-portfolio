@@ -38,20 +38,20 @@ const Navbar = () => {
                     initial={{ y: -10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay:0.3 }}  >
-                        <Link href="#projects"
+                        <Link href="#experience"
                         className="flex items-center gap-1 font-medium text-textDark cursor-pointer hover:text-textGreen duration-300 nav-link">
                             <span className="text-textGreen">02</span>
-                            Projects
+                            Skills
                             </Link>
                     </motion.li>
                     <motion.li className=''
                     initial={{ y: -10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5,delay:0.3 }}  >
-                        <Link href="#experience"
+                        <Link href="#projects"
                         className="flex items-center gap-1 font-medium text-textDark cursor-pointer hover:text-textGreen duration-300 nav-link">
                             <span className="text-textGreen">03</span>
-                            Experience
+                            Projects
                             </Link>
                     </motion.li>
                     <motion.li className=''
