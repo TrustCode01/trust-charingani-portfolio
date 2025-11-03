@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar"
 import RightSide from "@/components/RightSide"
 import Experience from "@/components/Experience"
 import {motion} from 'framer-motion'
+import Projects from "@/components/Projects"
 export default function Home() {
   return (
     <div className="w-full h-screen font-bodyFont bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll">
@@ -29,6 +30,7 @@ export default function Home() {
       </div>
       <div className="mt-20">
         <Experience/>
+        <Projects />
       </div>
     </main>
     </div>
