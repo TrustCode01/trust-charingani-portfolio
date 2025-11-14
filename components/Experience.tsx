@@ -6,16 +6,30 @@ import UserInterface from './skills/UserInterface'
 import Github from "./skills/Github"
 import GenAI from "./skills/GenAI"
 import Standards from "./skills/Standards"
+import Sdlc from "./skills/Sdlc"
+
 
 const Experience = () => {
-  const [accessibility,setAccessibility] = useState(false)
+  const [sdlc,setSdlc] = useState(false)
+  const [accessibility,setAccessibility] = useState(true)
   const [seo,setSeo] = useState(false)
   const [uiux,setUiux] = useState(false)
   const [github,setGithub] = useState(false)
   const [genai,setGenAI] = useState(false)
   const [standards,setStandards] = useState(false)
 
+  const handleSdlc =()=>{
+     setSdlc(true)
+     setAccessibility(false)
+     setSeo(false)
+     setUiux(false)
+     setGithub(false)
+     setGenAI(false)
+     setStandards(false)
+  }
+
   const handleAccessibility =()=>{
+     setSdlc(false)
      setAccessibility(true)
      setSeo(false)
      setUiux(false)
@@ -24,6 +38,7 @@ const Experience = () => {
      setStandards(false)
   }
    const handleSeo =()=>{
+   setSdlc(false)
     setAccessibility(false)
      setSeo(true)
      setUiux(false)
@@ -33,6 +48,7 @@ const Experience = () => {
     
   }
    const handleUiUx =()=>{
+      setSdlc(false)
     setAccessibility(false)
      setSeo(false)
      setUiux(true)
@@ -42,6 +58,7 @@ const Experience = () => {
     
   }
    const handleGithub =()=>{
+      setSdlc(false)
     setAccessibility(false)
      setSeo(false)
      setUiux(false)
@@ -52,6 +69,7 @@ const Experience = () => {
   }
    const handleGenAI =()=>{
     setAccessibility(false)
+     setSdlc(false)
      setSeo(false)
      setUiux(false)
      setGithub(false)
@@ -59,6 +77,7 @@ const Experience = () => {
      setStandards(false)
   }
    const handlestandards =()=>{
+       setSdlc(false)
     setAccessibility(false)
      setSeo(false)
      setUiux(false)
@@ -72,6 +91,7 @@ const Experience = () => {
         <SectionTitle titleNo="02" title="Skills that i have learnt"/>
         <div className="w-full mt-6 sm:mt-8 md:mt-10 flex flex-col md:flex-row gap-8 md:gap-16">
           <ul className="flex flex-row md:flex-col flex-wrap justify-center md:justify-start md:w-40 lg:w-48 gap-2 md:gap-0">
+            <li onClick={handleSdlc} className={`${sdlc?'bg-textGreen text-black font-bold' : 'bg-transparent  text-textLight'} border-b-2 md:border-b-0  border-textGreen  hover:border-l-2 text-sm cursor-pointer duration-300 px-4 md:px-6 py-2 md:py-3 font-medium whitespace-nowrap`}>SDLC</li>
           <li onClick={handleAccessibility} className={`${accessibility?'bg-textGreen text-black font-bold' : 'bg-transparent  text-textLight'} border-b-2 md:border-b-0  border-textGreen  hover:border-l-2 text-sm cursor-pointer duration-300 px-4 md:px-6 py-2 md:py-3 font-medium whitespace-nowrap`}>Web Accessibility</li>
              <li onClick={handleSeo} className={`${seo ?'bg-textGreen text-black font-bold' : 'bg-transparent text-textLight'} border-b-2 md:border-b-0   border-textGreen  hover:border-l-2 text-sm cursor-pointer duration-300 px-4 md:px-6 py-2 md:py-3 font-medium`}>SEO</li>
               <li onClick={handleUiUx} className={` ${uiux ? 'bg-textGreen text-black font-bold': 'bg-transparent text-textLight'} border-b-2 md:border-b-0  border-textGreen hover:border-l-2 text-sm cursor-pointer duration-300 px-4 md:px-6 py-2 md:py-3 font-medium`}>UI/UX Design</li>
@@ -79,6 +99,7 @@ const Experience = () => {
                 <li onClick={handleGenAI} className={` ${genai ? 'bg-textGreen text-black font-bold':'bg-transparent text-textLight'} border-b-2 md:border-b-0  border-textGreen  hover:border-l-2 text-sm cursor-pointer duration-300 px-4 md:px-6 py-2 md:py-3 font-medium`}>Generative AI</li>
                  <li onClick={handlestandards} className={`${standards ? 'bg-textGreen text-black font-bold': 'bg-transparent text-textLight'} border-b-2 md:border-b-0  border-textGreen  hover:border-l-2 text-sm cursor-pointer duration-300 px-4 md:px-6 py-2 md:py-3 font-medium`}>W3C Best Practices</li>
           </ul>
+          {sdlc && <Sdlc/>}
           {accessibility && <Accessibility/>}
           {seo && <Seo/>} 
           {uiux && <UserInterface/>}

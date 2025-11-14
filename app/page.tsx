@@ -7,6 +7,9 @@ import RightSide from "@/components/RightSide"
 import Experience from "@/components/Experience"
 import {motion} from 'framer-motion'
 import Projects from "@/components/Projects"
+import Archaive from "@/components/Archaive"
+import Contact from "@/components/Contact"
+import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <div className="w-full h-screen font-bodyFont bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll">
@@ -31,6 +34,9 @@ export default function Home() {
       <div className="mt-20">
         <Experience/>
         <Projects />
+        <Archaive />
+        <Contact />
+        <Footer/>
       </div>
     </main>
     </div>

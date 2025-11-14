@@ -15,7 +15,7 @@ const About = () => {
         <div className='flex flex-col lg:flex-row gap-8 lg:gap-16'>
             <div className='w-full lg:w-2/3 text-sm sm:text-base text-textDark font-medium flex flex-col gap-4 sm:gap-6'>
             <p>
-            I'm Trust, a junior web developer based in Harare, Zimbabwe, passionate about building meaningful digital experiences for education and faith communities. I specialize in crafting responsive, accessible interfaces using HTML, CSS, and Tailwind CSS, and bring ideas to life with React.js and Next.js. Whether it's a school enrollment platform or a church mission app, I thrive on creating reliable, user-centered solutions that empower others. With a methodical approach and a heart for impact, I'm always learning, building, and collaborating—one component at a time.</p>
+            I'm Trust, a junior web developer based in Harare, Zimbabwe, passionate about building meaningful digital experiences for individuals,businesses and organisations. I specialize in crafting responsive, accessible interfaces using HTML, CSS, and Tailwind CSS, and bring ideas to life with React.js and Next.js. Whether it's a school enrollment platform or a church mission app, I thrive on creating reliable, user-centered solutions that empower others. With a methodical approach and a heart for impact, I'm always learning, building, and collaborating—one component at a time.</p>
             <p>Here are some of the technologies that i have been working with recently:</p>
             <ul className="w-full max-w-[450px] font-titleFont grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-3 sm:gap-4 text-sm">
               <li className='flex items-center gap-2'><AiFillThunderbolt className='text-textGreen w-4 h-4'/><span>HTML</span></li>

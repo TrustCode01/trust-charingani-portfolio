@@ -19,7 +19,7 @@ const Center = () => {
          initial={{y:10,opacity:0}}
         animate={{y:0, opacity:1}}
         transition={{duration:0.5, delay:1}}
-         className="text-sm sm:text-base max-w-[90%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[650px] font-bodyFont text-textDark font-medium">
+         className="text-sm sm:text-base sm:text-justify max-w-[90%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[650px] font-bodyFont text-textDark font-medium">
          I'm a passionate software developer who thrives on solving real-world problems through clean, efficient code. I specialize in building modern, responsive web applications using tools like React, Next.js, and Tailwind CSS. Whether it's streamlining school enrollments or empowering mission-driven communities, I love turning ideas into impactful digital solutions that make a difference.{""} <br />
           <a href="" target='_blank'>
             <span className='text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group mt-4'>Learn More
