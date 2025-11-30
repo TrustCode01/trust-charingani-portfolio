@@ -87,7 +87,7 @@ const Experience = () => {
     
   }
   return (
-    <section id="experience" className="max-w-containerSmall mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-10 flex flex-col gap-6 sm:gap-8">
+    <section id="experience" className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 flex flex-col gap-6 sm:gap-8">
         <SectionTitle titleNo="02" title="Skills that i have learnt"/>
         <div className="w-full mt-6 sm:mt-8 md:mt-10 flex flex-col md:flex-row gap-8 md:gap-16">
           <ul className="flex flex-row md:flex-col flex-wrap justify-center md:justify-start md:w-40 lg:w-48 gap-2 md:gap-0">

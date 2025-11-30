@@ -1,8 +1,12 @@
 import { AiFillThunderbolt } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 
 const Standards = () => {
   return (
-    <section>
+    <motion.section
+    initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={{duration:2, delay:0.5}}>
       <h3 className='text-2xl font-bold'>W3C Coding Essentials & Best Practices</h3>
       <p className='text-lg font-bold pb-4'>Following the W3C standards for better web apps</p>
 
@@ -65,7 +69,7 @@ const Standards = () => {
         These practices not only improve user experience but also ensure that my projects meet international standards for interoperability and longevity. I’m committed to writing clean, accessible, and standards-compliant code that reflects the best of modern web development.
 
       </p>
-    </section>
+    </motion.section>
   )
 }
 

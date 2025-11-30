@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Smooth scrolling for all anchor links */
+a[href^="#"] {
+  scroll-behavior: smooth;
+}
+
+/* Smooth scroll margin to account for fixed header */
+section {
+  scroll-margin-top: 5rem;
+}

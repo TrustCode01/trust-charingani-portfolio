@@ -3,7 +3,10 @@ import {AiFillThunderbolt} from 'react-icons/ai'
 
 const Seo = () => {
   return (
-    <motion.section className='text-white'>
+    <motion.section className='text-white'
+    initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={{duration:0.6, delay:0.1}}>
        <h3 className='font-bold text-2xl'>Search Engine Optimization</h3>
        <p className='text-md font-bold pb-4'>Building Websites that rank higher on search results</p>
          <p className=''>Thorough continuous learning i have managed to grasp a lot of skill and strategic thinking to make my websites and web App rank higher on search results and these include the following:</p> 
