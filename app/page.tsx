@@ -39,6 +39,7 @@ export default function Home() {
         <Resume/>
         <Contact />
         <Footer/>
+        
       </div>
     </main>
     </div>

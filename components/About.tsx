@@ -1,4 +1,6 @@
+"use client"
 import SectionTitle from '@/components/SectionTitle'
+import { motion } from 'framer-motion'
 import {AiFillThunderbolt} from 'react-icons/ai'
 import Image from 'next/image';
 import  {profileImg} from '@/public/assets/index'
@@ -8,8 +10,12 @@ interface props{
 }
 const About = () => {
   return (
-    <section 
-    id='about'
+    <motion.section
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false, amount: 0.5 }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    id="about"
      className='w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 flex flex-col gap-6 sm:gap-8'>
         <SectionTitle titleNo ='01' title='About Me'/>
         <div className='flex flex-col lg:flex-row gap-8 lg:gap-16'>
@@ -38,7 +44,7 @@ const About = () => {
               </div>
             </div>
         </div>
-    </section>
+    </motion.section>
   )
 }
 

@@ -1,4 +1,6 @@
-import { useState } from "react"
+"use client"
+import {motion} from 'framer-motion'
+import { use, useState } from "react"
 import SectionTitle from "@/components/SectionTitle"
 import Accessibility from "./skills/Accessibility"
 import Seo from "./skills/Seo"
@@ -87,7 +89,13 @@ const Experience = () => {
     
   }
   return (
-    <section id="experience" className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 flex flex-col gap-6 sm:gap-8">
+    <motion.section 
+     initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false, amount: 0.5 }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    id="experience" 
+    className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 flex flex-col gap-6 sm:gap-8">
         <SectionTitle titleNo="02" title="Skills that i have learnt"/>
         <div className="w-full mt-6 sm:mt-8 md:mt-10 flex flex-col md:flex-row gap-8 md:gap-16">
           <ul className="flex flex-row md:flex-col flex-wrap justify-center md:justify-start md:w-40 lg:w-48 gap-2 md:gap-0">
@@ -107,7 +115,7 @@ const Experience = () => {
           {genai && <GenAI/>}
           {standards && <Standards/>}
         </div>
-    </section>
+    </motion.section>
   )
 }
 

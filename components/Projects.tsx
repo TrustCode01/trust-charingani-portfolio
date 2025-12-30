@@ -1,3 +1,5 @@
+"use client"
+import { motion } from 'framer-motion'
 import SectionTitle from '@/components/SectionTitle'
 import Image from 'next/image'
 import {gradient} from '@/public/assets/index'
@@ -8,10 +10,16 @@ import { RxOpenInNewWindow } from 'react-icons/rx'
 
 const Projects = () => {
   return (
-  <section id='projects' className='w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 flex flex-col gap-12 sm:gap-16'>
+  <section 
+  id='projects' 
+  className='w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 flex flex-col gap-12 sm:gap-16'>
          <SectionTitle titleNo ='03' title='Some of my projects'/>
 
-         <article className="w-full shadow-lg p-6 bg-[#112240] rounded-md  flex flex-col items-center justify-center gap-28">
+         <motion.article 
+                 initial={{opacity:0, y:-50}}
+                 animate={{opacity:1,y:0}}
+                 transition={{duration:0.6,delay:0}}
+         className="w-full shadow-lg p-6 bg-[#112240] rounded-md  flex flex-col items-center justify-center gap-28">
           <div className='flex flex-col xl:flex-row gap-6'>
             <a className='w-full xl:w-1/2 h-auto group' href="https://gladtidingsfellowshiptariro.netlify.app/" target='_blank'>
             <div className="">
@@ -42,9 +50,13 @@ const Projects = () => {
           </div>
           </div>
          
-         </article>
+         </motion.article>
 
-          <article className="w-full flex flex-col bg-[#112240] p-6 rounded-lg items-center justify-center gap-28">
+          <motion.article 
+                 initial={{opacity:0, y:-50}}
+                 animate={{opacity:1,y:0}}
+                 transition={{duration:0.6,delay:0.2}}
+          className="w-full flex flex-col bg-[#112240] p-6 rounded-lg items-center justify-center gap-28">
           <div className='flex flex-col xl:flex-row-reverse gap-6'>
             <a className='w-full xl:w-1/2 h-auto group' href="#" target='_blank'>
             <div className="">
@@ -76,8 +88,12 @@ const Projects = () => {
           </div>
           </div>
          
-         </article>
-          <article className="w-full flex flex-col items-center justify-center gap-28">
+         </motion.article>
+          <motion.article 
+                 initial={{opacity:0, y:-50}}
+                 animate={{opacity:1,y:0}}
+                 transition={{duration:0.6,delay:0.4}}
+          className="w-full flex flex-col items-center justify-center gap-28">
           <div className='flex flex-col xl:flex-row gap-6'>
             <a className='w-full xl:w-1/2 h-auto group' href="#" target='_blank'>
             <div className="">
@@ -108,8 +124,12 @@ const Projects = () => {
           </div>
           </div>
          
-         </article>
-          <article className="w-full flex flex-col  items-center justify-center gap-28">
+         </motion.article>
+          <motion.article
+                 initial={{opacity:0, y:-50}}
+                 animate={{opacity:1,y:0}}
+                 transition={{duration:0.6,delay:0.6}}
+          className="w-full flex flex-col  items-center justify-center gap-28">
           <div className='flex flex-col xl:flex-row gap-6'>
             <a className='w-full xl:w-1/2 h-auto group' href="#" target='_blank'>
             <div className="">
@@ -140,7 +160,7 @@ const Projects = () => {
           </div>
           </div>
          
-         </article>
+         </motion.article>
     </section>
   )
 }

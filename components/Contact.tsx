@@ -1,4 +1,5 @@
 'use client'
+import { motion } from 'framer-motion'
 import SectionTitle from "./SectionTitle"
 import { HiOutlineMapPin, HiOutlinePhone, HiOutlineClock } from 'react-icons/hi2'
 import { useState } from 'react'
@@ -30,7 +31,10 @@ const Contact = () => {
   }
 
   return (
-    <section className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 flex flex-col gap-8 sm:gap-12 mt-20" id="contact">
+    <motion.section 
+
+    id="contact"
+    className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 flex flex-col gap-8 sm:gap-12 mt-20" >
       <SectionTitle titleNo="04" title="Get In Touch" />
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
@@ -174,7 +178,7 @@ const Contact = () => {
           )}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
