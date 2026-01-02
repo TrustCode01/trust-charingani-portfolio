@@ -10,7 +10,7 @@ const Archaive = () => {
     <motion.section 
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: false, amount: 0.5 }}
+    viewport={{ once: true, amount: 0.1 }}
     transition={{ duration: 0.6, delay: 0.2 }}
     className='w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto px-4 sm:px-8 md:px-12 py-8 sm:py-12 md:py-16 flex flex-col gap-6 sm:gap-8'>
         <h2 className='text-titleFont text-2xl font-bold text-center'>Some noteworthy Projects</h2>

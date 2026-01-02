@@ -93,7 +93,7 @@ const Experience = () => {
      initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, amount: 0.1 }}
-    transition={{ duration: 0.6, delay: 0.2 }}
+    transition={{ duration: 0.3, delay: 0.2 }}
     id="experience" 
     className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[75%] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-10 md:py-12 lg:py-16 flex flex-col gap-4 sm:gap-6 md:gap-8">
         <SectionTitle titleNo="02" title="Skills that i have learnt"/>

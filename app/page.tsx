@@ -16,13 +16,13 @@ export default function Home() {
     <div className="w-full h-screen font-bodyFont bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll">
     <Navbar/>
     <main className="pt-18 flex flex-col">
-      <header className="w-full relative min-h-screen pb-20 mdl:grid grid-cols-12 items-center gap-20">
+      <header className="w-full relative min-h-screen pb-20 mdl:grid grid-cols-12 items-center gap-10">
         <motion.div
         initial={{opacity:0,}}
         animate={{opacity:1}}
         transition={{delay:1.5, stiffness:300}}
          className="hidden mdl:inline-flex col-span-2 w-32 h-full fixed left-0 top-0"><LeftSide/></motion.div>
-        <div className="w-full mx-auto col-span-8 col-start-2 col-end-10 p-4"><Center/></div>
+        <div className="w-full mx-auto col-span-8 col-start-2 col-end-10 p-2 "><Center/></div>
         <motion.div
         initial={{opacity:0,}}
         animate={{opacity:1}}
